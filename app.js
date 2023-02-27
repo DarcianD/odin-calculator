@@ -1,35 +1,20 @@
-let display = document.getElementById('display');
-let buttons = Array.from(document.getElementsByClassName('button'));
+let operator = "";
+let previousValue = "";
+let currentValue = " ";
 
-buttons.map( function(button){
-    button.addEventListener('click', (e =>{
-        switch (e.target.innerText) {
-            case "AC":
-                 display.innerText = " ";
-            break;
-            case "←":
-                if(display.innerText ){
-                    display.innerText = display.innerText.slice(0,-1);
-                }
-            break;
-           default: display.innerText += e.target.innerText;
+document.addEventListener("DOMContentLoaded", function(){
+    let numbers = document.querySelectorAll(".button");
+    let operators = document.querySelector(".operator");
+    let display = document.querySelector("#display");
 
-      
-                
-        }}))});
+    numbers.forEach((button) => button.addEventListener("click", function(e){
+        handleNumber(e.target.textContent)
+        display.textContent = currentValue;
+        }))
+})
 
-        function storeVar(char){
-            let value = char.getAttribute("value")
-            console.log(value);
-        }
+        function handleNumber(num){
+            if(currentValue.length <= 5){
+                currentValue += num;
+            }};
 
-        function operate(op){
-            let sum;
-            sign = op.getAttribute("value");
-            if( sign ==="+"){
-                sum = storeVar() + storeVar();
-                return sum;
-            }
-            console.log(sum);
-
-        }

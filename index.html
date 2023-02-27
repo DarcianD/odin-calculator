@@ -12,25 +12,24 @@
     <div class="container">
         <div id="display"></div>
         <div class="buttons">
-            <button class="button">AC</button>
-            <button class="button">+/-</button>   
+            <button id="clear" class="button">AC</button>
             <button class="button">&larr;</button>
-            <button class="button" >/</button>
-            <button class="button" onclick="storeVar(this)" value="7">7</button>
-            <button class="button" onclick="storeVar(this)" value="8">8</button>
-            <button class="button" onclick="storeVar(this)" value="9">9</button>
-            <button class="button" >*</button>
+            <button class="operator">/</button>
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="operator">*</button>
             <button class="button">4</button>
             <button class="button">5</button>
             <button class="button">6</button>
-            <button class="button"  onclick="operate(this)" value="+">+</button>
+            <button class="operator">+</button>
             <button class="button">1</button>
             <button class="button">2</button>
             <button class="button">3</button>
-            <button class="button" >-</button>
-            <button id="zero"  class="button">0</button>
+            <button class="operator">-</button>
+            <button class="button">0</button>
             <button class="button">.</button>
-            <button class="button"  onclick="operate(this)" value="=">=</button>
+            <button class="equal" class="button">=</button>
     </div>
     </div>
     <script src="app.js" ></script>
