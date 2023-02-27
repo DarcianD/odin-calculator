@@ -13,5 +13,23 @@ buttons.map( function(button){
                 }
             break;
            default: display.innerText += e.target.innerText;
+
+      
                 
         }}))});
+
+        function storeVar(char){
+            let value = char.getAttribute("value")
+            console.log(value);
+        }
+
+        function operate(op){
+            let sum;
+            sign = op.getAttribute("value");
+            if( sign ==="+"){
+                sum = storeVar() + storeVar();
+                return sum;
+            }
+            console.log(sum);
+
+        }
