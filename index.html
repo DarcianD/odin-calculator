@@ -10,10 +10,13 @@
 <body>
     <h1 id="title">Calculator</h1>
     <div class="container">
-        <div id="display"></div>
+        <div id="display">
+            <div id="previous"></div>
+            <div id="current"></div>
+        </div>
         <div class="buttons">
             <button id="clear" class="button">AC</button>
-            <button class="button">&larr;</button>
+            <button id="backSpace" class="button">&larr;</button>
             <button class="operator">/</button>
             <button class="button">7</button>
             <button class="button">8</button>
@@ -28,8 +31,8 @@
             <button class="button">3</button>
             <button class="operator">-</button>
             <button class="button">0</button>
-            <button class="button">.</button>
-            <button class="equal" class="button">=</button>
+            <button id="decimal" class="button">.</button>
+            <button id="equal">=</button>
     </div>
     </div>
     <script src="app.js" ></script>
